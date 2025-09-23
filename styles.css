@@ -1,0 +1,98 @@
+/* Light theme basado en el mock */
+:root{
+  --bg:#f5f7f8;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --line:#e6ebef;
+  --brand:#19c2a2;       /* teal botón */
+  --brand-dark:#12a48a;
+  --chip:#f0f5f4;
+  --container:1100px;
+  --radius:14px;
+  --shadow:0 10px 24px rgba(0,0,0,.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(92%,var(--container));margin-inline:auto}
+.center{text-align:center}
+.muted{color:var(--muted)}
+.lead{max-width:68ch;margin:8px auto 28px;color:var(--muted)}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.header-row{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.brand-dot{width:14px;height:14px;border-radius:50%;background:var(--brand)}
+.brand-text{letter-spacing:.2px}
+
+/* Idiomas */
+.lang-switch{display:flex;gap:6px}
+.lang-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .6rem;cursor:pointer}
+.lang-btn[aria-pressed="true"]{background:var(--brand);color:#fff;border-color:transparent}
+
+/* Hamburguesa */
+.hamburger{width:44px;height:40px;border:1px solid var(--line);border-radius:12px;background:#fff;display:grid;place-items:center;cursor:pointer}
+.hamburger span{display:block;width:20px;height:2px;background:#1f2937;border-radius:2px}
+.hamburger span+span{margin-top:4px}
+
+/* Menú móvil: oculto por atributo hidden */
+.mobile-nav{display:grid;gap:6px;padding:10px 4%;background:#fff;border-bottom:1px solid var(--line)}
+.mobile-nav[hidden]{display:none !important;} /* clave para que no se vea por default */
+.mobile-nav a{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#fff}
+
+/* Hero */
+.hero{position:relative;background:#eaf1ef;border-bottom:1px solid var(--line)}
+.hero-media{position:absolute;inset:0;z-index:0;opacity:.18}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-inner{position:relative;z-index:1;padding:72px 0}
+.h1{font-size:clamp(28px,3.2vw,42px);line-height:1.18;margin:0 0 14px}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:.8rem 1.2rem;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.primary:hover{background:var(--brand-dark);border-color:var(--brand-dark)}
+.btn.outline{background:#fff;color:var(--text)}
+
+/* Secciones y layout */
+.section{padding:56px 0}
+.section-alt{background:#fff}
+.grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+@media (max-width: 900px){ .grid-2{grid-template-columns:1fr;gap:18px} }
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+.about-photo img{border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover}
+
+/* Chips */
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:18px 0 8px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:.7rem .9rem;border-radius:12px;background:var(--chip);border:1px solid #d9e9e5}
+
+/* Testimonios */
+.testi p{margin:0 0 10px}
+.author{color:var(--muted);font-weight:600}
+
+/* Formulario */
+.form{max-width:800px;margin:18px auto 0}
+.field{display:grid;gap:6px;margin:14px 0}
+.field input,.field textarea{
+  width:100%;padding:.9rem 1rem;border-radius:12px;border:1px solid var(--line);background:#fff
+}
+.field input::placeholder,.field textarea::placeholder{color:#9aa3af}
+.hp{position:absolute;left:-5000px}
+.form-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.form-note{color:var(--muted);min-height:1.2em}
+
+/* Footer */
+.site-footer{background:#0f1720;color:#e5eef7;padding:28px 0;margin-top:32px}
+.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-grid .muted{color:#a8b3c6}

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="site.title">GlowWithin · Counseling</title>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header fijo con marca, idiomas y hamburguesa -->
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="#" class="brand">
+        <span class="brand-dot"></span><span class="brand-text">GlowWithin</span>
+      </a>
+
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+
+      <button class="hamburger" aria-controls="siteNav" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Menú solo móvil pero también en desktop si querés -->
+    <nav id="siteNav" class="mobile-nav" hidden>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#counseling" data-i18n="nav.counseling">What is counseling</a>
+      <a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero claro con foto y CTA -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1920&auto=format&fit=crop" alt="" />
+    </div>
+    <div class="container hero-inner">
+      <h1 class="h1" data-i18n="hero.title">
+        Descubre tu poder y abraza tu mejor versión, brillando desde adentro.
+      </h1>
+      <div class="cta-row">
+        <a class="btn primary" href="#contact" data-i18n="hero.cta">Reserva una call de 20 min gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="about" class="section">
+    <div class="container grid-2">
+      <div class="about-copy">
+        <h2 class="h2" data-i18n="about.title">Sobre mí</h2>
+        <p data-i18n="about.hello">Hola. Soy Romina, de Buenos Aires, ahora viviendo en Alemania.</p>
+        <p data-i18n="about.body1">Después de muchos cambios entendí lo que se necesita para avanzar. Ayudo a mujeres y hombres a mejorar la gestión emocional, la comunicación y la confianza personal.</p>
+        <p data-i18n="about.body2">Trabajo con una mirada humana usando herramientas de la Terapia Cognitivo Conductual.</p>
+        <p data-i18n="about.body3">Querés ver si encajamos. Agendá un encuentro virtual corto.</p>
+        <a class="btn outline" href="#contact" data-i18n="about.cta">Reservar encuentro virtual gratuito</a>
+      </div>
+      <div class="about-photo card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Romina portrait" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué es Counseling -->
+  <section id="counseling" class="section section-alt">
+    <div class="container">
+      <h2 class="h2 center" data-i18n="counseling.title">Qué es counseling</h2>
+      <p class="lead center" data-i18n="counseling.lead">El counseling es un acompañamiento que te ayuda a transitar desafíos personales y crecer con claridad.</p>
+
+      <h3 class="h3 center" data-i18n="counseling.areasTitle">Áreas de trabajo</h3>
+      <div class="chips">
+        <span class="chip" data-i18n="areas.emotions">Reconocimiento y manejo de emociones</span>
+        <span class="chip" data-i18n="areas.wellbeing">Estrés y bienestar</span>
+        <span class="chip" data-i18n="areas.balance">Balance vida y trabajo</span>
+        <span class="chip" data-i18n="areas.growth">Crecimiento personal</span>
+        <span class="chip" data-i18n="areas.boundaries">Límites y asertividad</span>
+        <span class="chip" data-i18n="areas.communication">Estilos de comunicación</span>
+        <span class="chip" data-i18n="areas.dialogue">Mejorar el diálogo en pareja</span>
+        <span class="chip" data-i18n="areas.empower">Confianza y empoderamiento</span>
+        <span class="chip" data-i18n="areas.change">Gestión del cambio</span>
+        <span class="chip" data-i18n="areas.relationships">Relaciones</span>
+      </div>
+
+      <div class="center">
+        <a class="btn primary" href="#contact" data-i18n="counseling.cta">Reserva una llamada gratis de 20 min</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2 class="h2 center" data-i18n="testimonials.title">Descubriendo otras historias</h2>
+      <article class="testi card">
+        <p data-i18n="testimonials.quote1">Me sentía trabada con los mismos pensamientos. Con las herramientas y el apoyo semanal volví a confiar en mí.</p>
+        <span class="author">Alejandra</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contacto con Formspark -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="h2 center" data-i18n="contact.title">Estemos en contacto</h2>
+      <p class="lead center" data-i18n="contact.lead">Elegí día y hora para un encuentro virtual gratis de 20 min o enviá un mensaje.</p>
+
+      <div class="center">
+        <a class="btn primary" href="#contact" data-i18n="counseling.cta">Reserva una llamada gratis de 20 min</a>
+      </div>
+
+      <form id="contactForm" class="form card" method="POST" action="https://submit-form.com/YOUR_FORMSPARK_ID">
+        <!-- Hidden helpers Formspark -->
+        <input type="hidden" name="_redirect" value="" />
+        <input type="text" name="_honeypot" class="hp" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="_email.subject" value="New contact from GlowWithin" />
+        <input type="hidden" name="_feedback.success.title" value="Thanks. Your message is in." />
+        <input type="hidden" name="_feedback.success.text" value="I will get back to you shortly." />
+
+        <div class="field">
+          <label for="name" data-i18n="form.name">Nombre</label>
+          <input id="name" name="name" type="text" required placeholder="Jane Doe" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="jane@email.com" />
+        </div>
+
+        <div class="field">
+          <label for="message" data-i18n="form.msg">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Contame en qué te puedo ayudar"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button id="sendBtn" class="btn primary" type="submit" data-i18n="form.send">Enviar</button>
+          <span id="formNote" class="form-note" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Romina Jorge</strong>
+        <div class="muted" data-i18n="footer.roles">Counseling. Máster en Comunicación.</div>
+      </div>
+      <div class="muted">© <span id="year"></span> Romina Jorge</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
